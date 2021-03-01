@@ -50,7 +50,7 @@ if ((Get-AppxPackage -Name Microsoft.DesktopAppInstaller) -eq $null) {
 
 Foreach($program in $software) {
     "installing "+$program.name
-	winget install $program.value
+	winget install -e --id $program.value
 }
 
 #todo : install windows features like WSL, virtualization
