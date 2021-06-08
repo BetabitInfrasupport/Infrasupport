@@ -44,7 +44,7 @@ $software = @{
 #install winget if it's not available yet
 #todo : default to latest version
 if ((Get-AppxPackage -Name Microsoft.DesktopAppInstaller) -eq $null) {
-       Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v-0.2.10191-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle" -OutFile ".\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
+       Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.0.11451/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle" -OutFile ".\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
        Add-AppxPackage -Path ".\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
        Remove-Item -path ".\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle"
 }
